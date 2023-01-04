@@ -1,0 +1,61 @@
+.list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.address {
+    margin-top: 28px;
+
+    &__panel {
+    margin-bottom: 12px;
+
+        &:last-child {
+        margin-bottom: 0;
+        }
+    }
+
+    &__supercription {
+    color: $simpleWhiteTextColor;
+    text-decoration-line: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        color: $accentColor;
+        }
+    }
+
+    &__mail {
+    color: $footerMailTelColor;
+    text-decoration-line: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        color: $accentColor;
+        }
+    }
+
+    &__tel {
+    color: $footerMailTelColor;
+    text-decoration-line: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover,
+        &:focus {
+        color: $accentColor;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: $backgroundHeroColor;
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.footer-first {
+    margin-right: 70px;
+}

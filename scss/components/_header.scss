@@ -1,0 +1,27 @@
+.header {
+    border-bottom: 1px solid $borderColorHeader;
+
+
+    @media screen and (min-width:768px) {
+    position: relative;
+    height: 80px;
+    }
+
+    &__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    margin: 16px auto;
+
+    
+
+
+
+
+    // @media screen and (min-width: 767px){
+    //     margin: 0 auto;
+    // }
+}
+}

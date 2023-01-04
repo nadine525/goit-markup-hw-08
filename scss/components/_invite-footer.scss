@@ -1,0 +1,59 @@
+.invite {
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $simpleWhiteTextColor;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.subscription-input {
+    height: 50px;
+    width: 358px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, .6);
+    outline: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: 12px;
+}
+
+.subscription-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    background-color: $accentColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    border: none;
+    font-family: 'Roboto';
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: $simpleWhiteTextColor;
+}
+
+.subscription-button-icon {
+    margin-left: 10px;
+    fill: $simpleWhiteTextColor;
+}
