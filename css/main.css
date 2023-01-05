@@ -532,9 +532,6 @@ img {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
-.team__item:nth-last-child(-n+1) {
-  margin-bottom: 0;
-}
 @media screen and (min-width: 768px) {
   .team__item {
     margin-right: 30px;
