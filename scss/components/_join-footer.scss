@@ -1,5 +1,15 @@
 .footer-second {
-    margin-right: 93px;
+    @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) {
+    margin-right: 93px;    
+    }  
+
+    @media screen and (min-width: 1200px) {
+    text-align: left; 
+    }
 }
 
 .footer__title {
