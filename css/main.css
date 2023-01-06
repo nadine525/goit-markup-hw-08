@@ -103,6 +103,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .header__container {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1488,6 +1489,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .menu-button__icon-close {
@@ -1495,5 +1497,24 @@ img {
 }
 
 .menu-button.is-open .menu-button__icon-close {
+  display: block;
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: aquamarine;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  height: 400px;
+}
+.menu-container.is-open {
   display: block;
 }/*# sourceMappingURL=main.css.map */

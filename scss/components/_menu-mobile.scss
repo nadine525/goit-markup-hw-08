@@ -4,6 +4,11 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
+    // @media screen and (min-width:768px) {
+    // display: none;
+    // }
 }
 
 .menu-button__icon-close {
@@ -12,4 +17,26 @@
 
 .menu-button.is-open .menu-button__icon-close {
     display: block;
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+    display: none;
+}
+
+.menu-container {
+    display: none;
+    position: absolute;
+    // top: 0;
+    left: 0;
+    width: 100%;
+
+    background-color: aquamarine;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    height: 400px;
+
+    &.is-open {
+        display: block;
+    }
 }

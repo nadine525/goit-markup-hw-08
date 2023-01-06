@@ -23,7 +23,7 @@
       <div class="header__container">
         <nav class="nav">
           <a href="./index.html" class="logo"><span class="logo--accent">Web</span>Studio</a>
-          <button type="button" class="menu-button is-open">
+          <button type="button" class="menu-button js-open-menu" data-menu-button aria-expanded="false" aria-controls="menu-container">
             <svg width="40" height="40" aria-label="Перемикач мобільного меню">
               <use class="menu-button__icon-close" href="./images/icons.svg#icon-close"></use>
               <use class="menu-button__icon-menu" href="./images/icons.svg#icon-menu"></use>
@@ -60,6 +60,11 @@
                 </svg>+38 096 111 11 11</a>
           </li>
         </ul>
+      </div>
+
+      <!--Мобільне меню-->
+      <div class="menu-container js-menu-container" id="menu-container" data-menu>
+        Контентне меню
       </div>
     </header>
 
@@ -540,6 +545,7 @@
       </div>
     </div>
 
-  <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
