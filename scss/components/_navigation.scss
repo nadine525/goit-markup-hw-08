@@ -1,7 +1,8 @@
 .nav {
     @extend %list;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .site-nav {

@@ -61,6 +61,11 @@ img {
   font-size: 24px;
   line-height: 1.16;
 }
+@media screen and (min-width: 480px) {
+  .logo {
+    margin-right: 276px;
+  }
+}
 @media screen and (min-width: 768px) {
   .logo {
     margin-right: 87px;
@@ -94,6 +99,20 @@ img {
   .header {
     position: relative;
     height: 80px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -132,9 +151,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .site-nav {
@@ -916,13 +938,9 @@ img {
     margin-bottom: 60px;
   }
 }
-@media screen and (min-width: 768px) {
-  .footer-second {
-    margin-right: 93px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer-second {
+    margin-right: 93px;
     text-align: left;
   }
 }
@@ -1462,4 +1480,20 @@ img {
   border-radius: 4px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button__icon-close {
+  display: none;
+}
+
+.menu-button.is-open .menu-button__icon-close {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
