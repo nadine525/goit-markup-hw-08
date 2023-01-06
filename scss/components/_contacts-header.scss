@@ -1,16 +1,32 @@
 .contacts {
     @extend %list;
     display: flex;
+    margin-left: auto;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: 767px) {
     display: none;
     }
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+    }
+
     &__items {
-    display: block;
+    // display: block;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+
+        &:last-child {
+        margin-bottom: 0;
+        }
+    }
+    
+
+    @media screen and (min-width: 1200px) {
     margin-right: 40px;
     margin-left: auto;
-
+    }
         &:nth-last-child(-n+1) {
         margin-right: 0px;
         }
@@ -19,10 +35,6 @@
     &__link {
     display: flex;
     color: $primary-text-color;
-
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     text-decoration-line: none;
     font-weight: 500;
     font-size: 14px;
@@ -34,6 +46,12 @@
         &:focus {
     color: $accentColor;
     }
+
+    @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;    
+    }
+
     }
 }
 

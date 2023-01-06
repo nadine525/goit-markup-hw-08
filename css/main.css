@@ -63,7 +63,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .logo {
-    margin-right: 88px;
+    margin-right: 87px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -99,6 +99,18 @@ img {
 @media screen and (min-width: 768px) {
   .header__container {
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -183,16 +195,34 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .contacts {
     display: none;
   }
 }
-.contacts__items {
-  display: block;
-  margin-right: 40px;
-  margin-left: auto;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__items {
+    margin-bottom: 10px;
+  }
+  .contacts__items:last-child {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__items {
+    margin-right: 40px;
+    margin-left: auto;
+  }
 }
 .contacts__items:nth-last-child(-n+1) {
   margin-right: 0px;
@@ -202,8 +232,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   color: #757575;
-  padding-top: 32px;
-  padding-bottom: 32px;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   font-weight: 500;
@@ -215,6 +243,12 @@ img {
 }
 .contacts__link:hover, .contacts__link:focus {
   color: #2196F3;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contact-icon {
@@ -527,6 +561,10 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: calc(100% - 60px)/2;
+        flex-basis: calc(100% - 60px)/2;
   }
 }
 .team__item {
@@ -542,41 +580,44 @@ img {
     margin-right: 30px;
   }
 }
-.team__item:nth-last-child(-n+1) {
+.team__item:nth-child(2n) {
   margin-right: 0;
 }
-.team__name {
+@media screen and (min-width: 1200px) {
+  .team__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+  .team__item:nth-child(2n):last-child {
+    margin-right: 0;
+  }
+}
+.team__item__name {
   margin: 0;
   color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
 }
-.team__position {
+.team__item__position {
   margin: 0;
   margin-top: 10px;
   color: #757575;
   font-size: 16px;
   line-height: 1.18;
 }
-
-.demianenko {
+.team .demianenko {
   padding: 30px;
 }
-
-.repina {
+.team .repina {
   padding: 30px;
 }
-
-.tarasov {
+.team .tarasov {
   padding: 30px;
 }
-
-.ermakov {
+.team .ermakov {
   padding: 30px;
 }
-
-.social {
+.team .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,15 +631,14 @@ img {
           justify-content: center;
   gap: 10px;
 }
-.social__links {
+.team .social__links {
   width: 44px;
   height: 44px;
 }
-.social__icon {
+.team .social__icon {
   fill: currentColor;
 }
-
-.network {
+.team .network {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,11 +656,11 @@ img {
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.network:hover, .network:focus {
+.team .network:hover, .team .network:focus {
   background-color: #2196F3;
   color: #FFFFFF;
 }
-.network:hover .social__icon, .network:focus .social__icon {
+.team .network:hover .social__icon, .team .network:focus .social__icon {
   fill: #FFFFFF;
 }
 

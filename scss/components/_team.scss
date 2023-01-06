@@ -37,6 +37,8 @@
 
     @media screen and (min-width: 768px) {
         display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - 2 * 30px)) / 2;
     }
 
 
@@ -50,10 +52,19 @@
     @media screen and (min-width: 768px) {
     margin-right: 30px;    
     }
-
-        &:nth-last-child(-n+1) {
-        margin-right: 0;
+        &:nth-child(2n) {
+            margin-right: 0;
         }
+
+        @media screen and (min-width: 1200px) {
+            &:nth-child(2n) {
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    
     }
 
     &__name {
@@ -62,7 +73,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 1.18;
-        }
+    }
 
     &__position {
         margin: 0;
@@ -70,7 +81,7 @@
         color: $primary-text-color;
         font-size: 16px;
         line-height: 1.18;
-        }
+    }
 }
 
 .demianenko {
@@ -128,5 +139,6 @@
     &:hover .social__icon,
     &:focus .social__icon {
     fill: $simpleWhiteTextColor;
+}
 }
 }
