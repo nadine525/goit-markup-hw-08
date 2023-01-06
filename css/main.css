@@ -61,6 +61,11 @@ img {
   font-size: 24px;
   line-height: 1.16;
 }
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .logo {
     margin-right: 93px;
@@ -91,17 +96,24 @@ img {
     height: 80px;
   }
 }
-.header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 16px auto;
+@media screen and (min-width: 768px) {
+  .header__container {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 16px auto;
+  }
 }
 
 .nav {
