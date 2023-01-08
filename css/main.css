@@ -1,4 +1,4 @@
-.mobile-contacts, .mobile-menu, .portfolio, .filter, .clients-list, .team, .work, .features, .contacts, .nav {
+.mobile-social, .mobile-contacts, .mobile-menu, .portfolio, .filter, .clients-list, .team, .work, .features, .contacts, .nav {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1603,6 +1603,9 @@ img {
   color: #2196F3;
 }
 
+.mobile-contacts {
+  margin-bottom: 64px;
+}
 .mobile-contacts__item {
   margin-bottom: 32px;
   text-decoration: none;
@@ -1617,7 +1620,7 @@ img {
   line-height: 1.18;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #757575;
+  color: #2196F3;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1638,4 +1641,34 @@ img {
 }
 .contacts-mail:hover, .contacts-mail:focus {
   color: #2196F3;
+}
+
+.mobile-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.mobile-social__item {
+  margin-right: 10px;
+}
+.mobile-social__item:last-child {
+  margin-right: 0;
+}
+.mobile-social__link {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196F3;
+  text-decoration: none;
+}
+
+.line {
+  color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
 }/*# sourceMappingURL=main.css.map */
