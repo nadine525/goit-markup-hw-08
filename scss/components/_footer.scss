@@ -11,7 +11,7 @@
     &__container {
     @extend %container;
     
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 320px) {
     text-align: center;
     }
     
@@ -52,7 +52,7 @@
 // }
 
 .footer-first {
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 320px) {
     margin-bottom: 60px;
     text-align: center;
     }

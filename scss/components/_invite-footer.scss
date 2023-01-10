@@ -11,8 +11,9 @@
 }
 
 .subscription-form {
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 320px) {
     display: block;
+    // align-items: center;
     }
 
     @media screen and (min-width: 1200px) {
@@ -24,7 +25,7 @@
 }
 
 .subscription-input {
-    @media screen and (min-width: 459px) {
+    @media screen and (min-width: 320px) {
     width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, .3);
@@ -71,7 +72,7 @@
 
     color: $simpleWhiteTextColor;
 
-    @media screen and (min-width: 450px) {
+    @media screen and (min-width: 320px) {
         margin-right: auto;
         margin-left: auto;
     }

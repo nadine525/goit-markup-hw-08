@@ -69,14 +69,19 @@
     margin: 0;
     font-family: 'Roboto';
     font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
+    font-size: 20px;
+    line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
     margin-bottom: 30px;
     text-transform: uppercase;
     color: $simpleWhiteTextColor;
     
+    @media screen and (min-width: 480px) {
+    font-size: 26px;
+    line-height: 1.62;
+        }
+
 
     @media screen and (min-width: 1200px) {
     margin-top: 0;
