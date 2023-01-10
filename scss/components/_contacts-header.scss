@@ -51,12 +51,34 @@
     padding-top: 32px;
     padding-bottom: 32px;    
     }
-
     }
 }
 
-.contact-icon {
-    margin-right: 10px;
+.contact-icon-envelope {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
     align-self: center;
     fill: currentColor;
+
+    @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;    
+    }
+}
+
+.contact-icon-smartphone {
+    width: 10px;
+    height: 12px;
+    margin-right: 8px;
+    align-self: center;
+    flex-direction: flex-start;
+    fill: currentColor;
+
+    @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    }
 }

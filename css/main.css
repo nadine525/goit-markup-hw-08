@@ -94,10 +94,13 @@ img {
 
 .header {
   border-bottom: 1px solid #ECECEC;
-  position: relative;
+  position: absolute;
+  height: 60px;
+  width: 100%;
   z-index: 1;
   top: 0;
   left: 0;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -105,20 +108,18 @@ img {
     height: 80px;
   }
 }
-@media screen and (min-width: 480px) {
-  .header__container {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 10px auto;
-  }
+.header__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px auto;
 }
 @media screen and (min-width: 768px) {
   .header__container {
@@ -148,7 +149,6 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin: 16px auto;
   }
 }
 
@@ -210,7 +210,7 @@ img {
   display: block;
   content: "";
   position: absolute;
-  bottom: -1.5px;
+  bottom: -1px;
   right: 0;
   width: 100%;
   height: 4px;
@@ -278,18 +278,49 @@ img {
   }
 }
 
-.contact-icon {
-  margin-right: 10px;
+.contact-icon-envelope {
+  width: 10px;
+  height: 14px;
+  margin-right: 8px;
   -ms-flex-item-align: center;
       align-self: center;
   fill: currentColor;
 }
+@media screen and (min-width: 1200px) {
+  .contact-icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+}
+
+.contact-icon-smartphone {
+  width: 10px;
+  height: 12px;
+  margin-right: 8px;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
+  fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .contact-icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
 
 .hero {
+  margin: 0 auto;
   margin-left: auto;
   margin-right: auto;
-  padding: 116px 30px;
+  padding: 118px 0;
   text-align: center;
+  max-width: 480px;
   background-color: #C4C4C4;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero-mobile.jpg");
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-mobile.jpg");
@@ -333,12 +364,14 @@ img {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero__title {
+    margin: 0;
     font-family: "Roboto";
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
+    margin-bottom: 30px;
     text-transform: uppercase;
     color: #FFFFFF;
   }
@@ -346,7 +379,6 @@ img {
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero__title {
     margin-top: 0;
-    margin-bottom: 30px;
     font-size: 44px;
     line-height: 1.36;
   }
@@ -410,6 +442,17 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding-bottom: 0;
   }
 }
 .features__examples {
@@ -420,19 +463,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .features__examples {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    margin-right: 30px;
+    margin-bottom: 0px;
+    width: 354px;
   }
 }
 @media screen and (min-width: 1200px) {
   .features__examples {
-    margin-right: 30px;
-    -ms-flex-preferred-size: calc((100% - 90px) / 4);
-        flex-basis: calc((100% - 90px) / 4);
-  }
-  .features__examples:nth-last-child(-n+1) {
-    margin-right: 0px;
+    width: 270px;
   }
 }
 .features__container {
@@ -450,16 +487,6 @@ img {
   border-radius: 4px;
   margin-bottom: 30px;
 }
-@media csreen and (min-width: 1200px) {
-  .features__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-  }
-}
 .features__icon {
   width: 70px;
   height: 70px;
@@ -474,6 +501,11 @@ img {
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .description {
@@ -566,6 +598,7 @@ img {
 }
 
 .team__title {
+  margin: 0;
   color: #212121;
   text-align: center;
   font-family: "Roboto";
@@ -590,8 +623,7 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-preferred-size: calc(100% - 60px)/2;
-        flex-basis: calc(100% - 60px)/2;
+    gap: 30px;
   }
 }
 .team__item {
@@ -602,30 +634,27 @@ img {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .team__item {
-    margin-right: 30px;
-  }
+.team__item:last-child {
+  margin-bottom: 0;
 }
-.team__item:nth-child(2n) {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .team__item:nth-child(3n) {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
-  .team__item:nth-child(2n) {
-    margin-right: 30px;
-  }
-  .team__item:nth-child(2n):last-child {
-    margin-right: 0;
+  .team__item {
+    margin-bottom: 0;
   }
 }
-.team__item__name {
+.team .team__name {
   margin: 0;
   color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
 }
-.team__item__position {
+.team .team__position {
   margin: 0;
   margin-top: 10px;
   color: #757575;
@@ -633,16 +662,16 @@ img {
   line-height: 1.18;
 }
 .team .demianenko {
-  padding: 30px;
+  padding: 30px 30px 24px 30px;
 }
 .team .repina {
-  padding: 30px;
+  padding: 30px 30px 24px 30px;
 }
 .team .tarasov {
-  padding: 30px;
+  padding: 30px 30px 24px 30px;
 }
 .team .ermakov {
-  padding: 30px;
+  padding: 30px 30px 24px 30px;
 }
 .team .social {
   display: -webkit-box;
@@ -711,6 +740,7 @@ img {
 }
 
 .clients__title {
+  margin: 0;
   color: #212121;
   text-align: center;
   font-family: "Roboto";
@@ -1303,9 +1333,9 @@ img {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    top: 208px;
-    -webkit-transform: translateY(-50% -50%);
-            transform: translateY(-50% -50%);
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1616,8 +1646,8 @@ img {
 
 .contacts-tel {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 1.18;
+  font-size: 34px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #2196F3;
@@ -1654,6 +1684,8 @@ img {
 }
 .mobile-social__item {
   margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 .mobile-social__item:last-child {
   margin-right: 0;
