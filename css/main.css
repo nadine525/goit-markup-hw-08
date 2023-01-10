@@ -61,6 +61,11 @@ img {
   font-size: 24px;
   line-height: 1.16;
 }
+@media screen and (mbn-width: 320px) {
+  .logo {
+    margin-right: 276px;
+  }
+}
 @media screen and (min-width: 480px) {
   .logo {
     margin-right: 276px;
@@ -717,14 +722,6 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
   }
-}
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .clients__title {
