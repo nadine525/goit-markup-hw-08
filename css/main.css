@@ -275,8 +275,8 @@ img {
 }
 
 .contact-icon-envelope {
-  width: 10px;
-  height: 14px;
+  width: 14px;
+  height: 10px;
   margin-right: 8px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -292,7 +292,7 @@ img {
 
 .contact-icon-smartphone {
   width: 10px;
-  height: 12px;
+  height: 14px;
   margin-right: 8px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -1702,6 +1702,9 @@ img {
   margin-right: 5px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   padding-right: 5px;
+}
+.mobile-social__item:last-child {
+  border-right: none;
 }
 @media screen and (min-width: 480px) {
   .mobile-social__item {
