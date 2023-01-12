@@ -1,14 +1,22 @@
 .examples {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
     padding-top: 94px;
-    padding-bottom: 94px;
+    padding-bottom: 94px;        
+    }
 }
 
 .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+
+   @extend %container;
+
+    // width: 1200px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    // margin-left: auto;
+    // margin-right: auto;
 }
 
 .visually-hidden {
@@ -26,18 +34,30 @@
 
 .filter {
     @extend %list;
+
     display: flex;
-    margin-bottom: 50px;
-    justify-content: center;
-}
-
-.filter__docket {
-    margin-right: 8px;
-
-    &:last-child {
-        margin-right: 0;
+    gap: 8px;   
+    margin-bottom: 40px; 
+       
+    @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    width: 80%;        
     }
+
+    @media screen and (min-width: 768px) {
+    justify-content: center;   
+    margin-bottom: 50px;
+    }
+
 }
+
+// .filter__docket {
+//     // margin-right: 8px;
+
+//     &:last-child {
+//         margin-right: 0;
+//     }
+// }
 
 .filter__button {
     border-radius: 4px;

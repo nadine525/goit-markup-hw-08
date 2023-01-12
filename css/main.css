@@ -9,11 +9,6 @@
   padding-right: 15px;
   margin: 0 auto;
 }
-@media screen and (min-width: 320px) {
-  .footer__container, .container, .header__container {
-    max-width: 320px;
-  }
-}
 @media screen and (min-width: 480px) {
   .footer__container, .container, .header__container {
     max-width: 480px;
@@ -1125,16 +1120,14 @@ img {
 }
 
 .examples {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+@media screen and (min-width: 1200px) {
+  .examples {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visually-hidden {
@@ -1155,17 +1148,23 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
 }
-
-.filter__docket {
-  margin-right: 8px;
+@media screen and (max-width: 767px) {
+  .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 80%;
+  }
 }
-.filter__docket:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__button {
