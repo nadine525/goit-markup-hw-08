@@ -3,29 +3,29 @@
     background-color: $backgroundColor;
 
     @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
     }
 }
 
 .portfolio__item {
 
-    width: 100%;  
+    width: 100%;
     margin-bottom: 30px;
 
-        &:last-child {
+    &:last-child {
         margin-bottom: 0px;
     }
 
 
     @media screen and (min-width: 768px) {
-    flex-basis: calc((100% -  30px) / 2);
-    margin-bottom: 0px;
+        flex-basis: calc((100% - 30px) / 2);
+        margin-bottom: 0px;
     }
 
     @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 2 * 30px) / 3);    
+        flex-basis: calc((100% - 2 * 30px) / 3);
     }
 }
 
@@ -63,6 +63,7 @@
     border-left: 1px solid $borderColorPortfolioContent;
     border-right: 1px solid $borderColorPortfolioContent;
     border-bottom: 1px solid $borderColorPortfolioContent;
+
 }
 
 
@@ -77,13 +78,13 @@
     &:hover,
     &:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
     }
 
     &:hover .overlay__description,
     &:focus .overlay__description {
-    transform: translatex(0);
+        transform: translatex(0);
     }
 }
 
@@ -102,4 +103,8 @@
     color: $primary-text-color;
     font-size: 16px;
     line-height: 1.88;
+}
+
+.hide {
+    display: none;
 }
